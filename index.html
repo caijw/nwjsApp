@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nwjsApp</title>
+</head>
+<body>
+	<h1>i am main</h1>
+
+<script type="text/javascript">
+	const config = require('./config');
+
+	const getLongText = require('./static/js/index.js').getLongText;
+
+	const assert = require('assert');
+
+	const Win = nw.Window.get();
+
+	Win.showDevTools('', function () {
+
+		var webview = document.createElement('webview');
+
+		webview.id = 'webview';
+
+		webview.addEventListener('dialog', function (event) {
+
+			var messageText = event.messageText;
+			assert.strictEqual(messageText, getLongText());
+			
+		});
+
+		document.body.appendChild(webview);
+
+		webview.src = 'http://127.0.0.1:' + config.port + '/static/html/index.html';
+
+	});
+
+
+</script>
+</body>
+</html>
