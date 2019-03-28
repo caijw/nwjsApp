@@ -4,7 +4,7 @@ This is a example to show this issue.
 
 0.24.4-sdk does not have this proble.
 
-0.37.1-sdk has this proble.
+0.37.1-sdk and other versions have this proble.
 
 ## about this example
 
