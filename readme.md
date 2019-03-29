@@ -36,10 +36,14 @@ nw install 0.24.4-sdk
 nw use 0.24.4-sdk
 ```
 
-2. clone this project
+2. clone this project and install dependencies
 
 ```
 git clone https://github.com/caijw/nwjsApp.git
+
+cd nwjsApp
+
+npm install
 ```
 
 3. run the static files server
